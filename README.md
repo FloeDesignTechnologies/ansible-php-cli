@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Pheromone/ansible-php-cli.svg?branch=master)](https://travis-ci.org/Pheromone/ansible-php-cli)
+
 Ansible PHP CLI
 ===============
 
