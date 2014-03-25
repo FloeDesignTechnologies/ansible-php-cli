@@ -1,11 +1,14 @@
 ---
+- name: "Add the OS specific varibles"
+  include_vars: "{{ ansible_os_family }}.yml"
+
 - name: "Install the php-cli packages"
   apt: name={{ item }} state=present update_cache=yes
   with_items: php_cli_apt_packages
   when: ansible_os_family == "Debian"
   tags: [packages,php]
 
-- name: "Configure php-cli's php.ini"
-  ini_file: dest=/etc/php5/cli/php.ini section="{{ item.section }}" option="{{ item.option }}" value="{{ item.value }}" backup=yes
-  with_items: php_cli_config
+- name: "Copy PHP Cli configuration file"
+  ini_file: dest={{ php_cli_ini_path }} section="{{ item.section }}" option="{{ item.option }}" value="{{ item.value }}" backup=yes
+  with_items: php_cli_ini
   tags: [configuration,php]

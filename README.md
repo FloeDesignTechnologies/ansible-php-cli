@@ -8,8 +8,8 @@ Role Variables
 
 The role uses the following variables
 
-- **php_cli_apt_packages**: The APT packages to install, defaults to ```[php-cli]```.
-- **php_cli_config**: Customization for php-cli's php.ini as a list of options,
+- **php_cli_apt_packages**: The APT packages to install, defaults to ```[php5-cli]```.
+- **php_cli_ini**: Customization for php-cli's php.ini as a list of options,
   each option is a hash using the following structure:
     - **option**: The name of the option.
     - **value**: The string value to be associated with the option.

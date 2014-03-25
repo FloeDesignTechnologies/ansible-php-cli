@@ -1,5 +1,5 @@
 ---
-php_cli_config:
+php_cli_ini:
  - option: "display_errors"
    section: "PHP"
    value: "1"
