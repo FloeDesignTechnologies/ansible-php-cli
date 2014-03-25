@@ -1,0 +1,11 @@
+---
+php_cli_config:
+ - option: "display_errors"
+   section: "PHP"
+   value: "1"
+ - option: "error_reporting"
+   section: "PHP"
+   value: "E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED"
+
+php_cli_apt_packages:
+ - php5-cli
