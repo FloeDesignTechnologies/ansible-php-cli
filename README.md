@@ -33,7 +33,7 @@ Usage
 License
 -------
 
-GPLv3
+Apache v2
 
 Author Information
 ------------------
