@@ -1,5 +1,5 @@
 ---
-- name: "Add the OS specific varibles"
+- name: "Add OS specific variables"
   include_vars: "{{ ansible_os_family }}.yml"
 
 - name: "Install the php-cli packages"
